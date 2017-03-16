@@ -1,0 +1,62 @@
+HTTP Status 500 – Internal Server Error
+
+Type Exception Report
+
+Message Unable to compile class for JSP:
+
+Description The server encountered an unexpected condition that prevented it from fulfilling the request.
+
+Exception
+
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 20 in the jsp file: /index.jsp
+UserDo cannot be resolved to a type
+17: String name=request.getParameter("phone");
+18: String password=request.getParameter("password");
+19: 
+20: UserDo userDo=new UserDo();
+21: User user=userDo.login(name, password);
+22: 
+23: 
+
+
+An error occurred at line: 20 in the jsp file: /index.jsp
+UserDo cannot be resolved to a type
+17: String name=request.getParameter("phone");
+18: String password=request.getParameter("password");
+19: 
+20: UserDo userDo=new UserDo();
+21: User user=userDo.login(name, password);
+22: 
+23: 
+
+
+An error occurred at line: 21 in the jsp file: /index.jsp
+User cannot be resolved to a type
+18: String password=request.getParameter("password");
+19: 
+20: UserDo userDo=new UserDo();
+21: User user=userDo.login(name, password);
+22: 
+23: 
+24: %>
+
+
+Stacktrace:
+	org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+	org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:212)
+	org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:457)
+	org.apache.jasper.compiler.Compiler.compile(Compiler.java:377)
+	org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	org.apache.jasper.compiler.Compiler.compile(Compiler.java:333)
+	org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:600)
+	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:368)
+	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+Note The full stack trace of the root cause is available in the server logs.
+
+Apache Tomcat/8.5.12
+
